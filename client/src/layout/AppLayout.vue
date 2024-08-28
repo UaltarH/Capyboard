@@ -4,6 +4,7 @@ import { computed, ref, watch } from 'vue';
 import AppFooter from './AppFooter.vue';
 import AppSidebar from './AppSidebar.vue';
 import AppTopbar from './AppTopbar.vue';
+import AppBreadcrumb from "@/layout/AppBreadcrumb.vue";
 
 const { layoutConfig, layoutState, isSidebarActive, resetMenu } = useLayout();
 
@@ -58,6 +59,7 @@ function isOutsideClicked(event) {
     <app-sidebar></app-sidebar>
     <div class="layout-main-container">
       <app-topbar></app-topbar>
+      <AppBreadcrumb></AppBreadcrumb>
       <div class="layout-main">
         <router-view></router-view>
       </div>
